@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export function SideBar() {
     return (
-        <div className="fiex left-0 top-0 h-full ">
+        <div className="fiex left-0 top-0 h-full w-96">
             <div className="w-80 bg-white shadow-md left-4 ">
                 <div className="border-b p-4 border-black mb-5">
                     <div className="flex justify-between items-center mb-5">

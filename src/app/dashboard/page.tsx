@@ -1,3 +1,5 @@
+//import { Roasters } from "../_components/roasters"
+import { Roasters } from "../_components/roasters"
 import { SideBar } from "../_components/sidebar"
 import { TopBar } from "../_components/topBar"
 
@@ -6,8 +8,10 @@ export default function Dashboard() {
     return (
        <div className="">
             <TopBar />
+            <div className="fixed top-30 left-96">
+                <Roasters />
+            </div>
             <SideBar />
-            <div className=""></div>
         </div> 
     )
 }
