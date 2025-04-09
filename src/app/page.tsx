@@ -57,20 +57,20 @@ export default async function Home() {
                 <h1 className="text-4xl font-bold text-[#5C3A1A] mb-3">Join Our Global Coffee Community</h1>
                 <p className="text-xl mb-6 text-[#5C3A1A]">Connect with fellow coffee lovers, discover unique stories behind every roast, and share your own brewing adventures</p>
                 <img src="/images/pexels-valeriiamiller-3361170.jpg" className="w-full h-[40rem] object-cover mb-10"/>
-                <div className="grid grid-cols-2 items-center justify-center">
-                    <div className="h-29 w-[30rem] col-span-1 flex flex-col">
+                <div className="grid grid-cols-2 gap-2">
+                    <div className="h-29 w-[30rem] grid">
                         <h2 className="text-3xl font-bold text-[#5C3A1A]"> Coffee That Makes a Difference</h2>
                         <span className="text-xl text-[#5C3A1A] mb-10">
                             We partener with roasters committed to sustainable sourcing,
                             ethical practices, and exceptional quality-so every cup you
                             brew supports both people and planet.
                         </span>
-                        <div className="">
-                        <img src="/images/pexels-michael-burrows-7125739.jpg" className="w-[40rem] h-[20rem] object-cover"/>
-                        </div>
+                        <img src="/images/pexels-michael-burrows-7125739.jpg" className="w-[46rem] h-[20rem] object-cover"/>
                     </div>
-                    <img src="/images/pexels-nsmedia97-27777799.jpg" className="w-[46rem] h-[30rem] object-cover col-span-1 mt-[30rem]"/>
-                    <img src="/images/pexels-michael-burrows-7125543.jpg" className="w-[96rem] h-[30rem] object-cover col-span-2 mt-20"/>
+                    <div className="grid gap-4">
+                        <img src="/images/pexels-nsmedia97-27777799.jpg" className="w-[46rem] h-[30rem] object-cover "/>
+                    </div>
+                    <img src="/images/pexels-michael-burrows-7125543.jpg" className="w-[93rem] h-[30rem] object-cover"/>
                 </div>
             </div>
             {/*Fourth part*/}
