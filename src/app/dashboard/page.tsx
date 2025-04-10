@@ -8,7 +8,7 @@ export default function Dashboard() {
     return (
        <div className="">
             <TopBar />
-            <div className="fixed top-30 left-96">
+            <div className="absolute overflow-y-auto top-30 left-96">
                 <Roasters />
             </div>
             <SideBar />

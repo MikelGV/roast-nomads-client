@@ -39,7 +39,7 @@ export function Roasters({cat}: RoastersProps) {
     }, [cat])
 
     return (
-        <div className="grid grid-cols-3 justify-center items-center gap-16">
+        <div className="grid grid-cols-3 overflow-y-auto justify-center items-center gap-16 mb-10">
             {
                 cat ? filteredRoasters.map((item) => (
                     <Roaster key={item.id.toString()} item={item} />

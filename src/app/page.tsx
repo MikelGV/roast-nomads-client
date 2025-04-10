@@ -9,8 +9,11 @@ export default async function Home() {
   return (
     <HydrateClient>
       <main className="flex min-h-screen flex-col items-center justify-center ">
-        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-                    {/*<TopBar />*/}
+        <div id="topbar" className=" px-96 flex justify-between items-center w-full">
+            <a href="someting" className="p-12 bg-gray-300 rounded-full"/>
+            <Link href="/dashboard" className="text-[#D97430] font-semibold text-xl">Try demo</Link> 
+        </div>
+        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-8">
             {/* First part*/}
             <div className="">
                 <h1 className="text-6xl font-bold text-center text-[#5C3A1A]">Travel the World Through Coffee</h1>

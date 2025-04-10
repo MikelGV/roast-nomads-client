@@ -10,7 +10,7 @@ interface Filters {
 
 interface Roaster {
     id: string | number;
-    name?: string;
+    roaster_name?: string;
     image?: string;
     location?: string;
     description?: string;
@@ -84,6 +84,7 @@ export default function Page() {
                     return;
                 }
 
+                console.log(roasterData.name)
                 setRoaster(roasterData);
 
                 const productRes = await fetch(`http://localhost:8080/api/products?roasters_id=${id}`, { cache: "no-store", credentials: "include"});
@@ -110,10 +111,10 @@ export default function Page() {
                 <Link href="/dashboard" className="text-[#D97430] font-semibold text-xl">Back</Link> 
             </div>
             {/*Roaster Profile*/}
-            <div id="roaster" className=" flex justify-center gap-10 mb-33">
-                <img src="{roaster.img.toString()}" className="mr-10" alt="{roaster.img.toString()}"/>
+            <div id="roaster" className=" flex justify-center gap-5 mb-33">
+                <img src="/images/pexels-dorukhan-pekcan-102942430-14050911.jpg" className=" w-[35rem] h-[45rem] object-cover" alt="{roaster.img.toString()}"/>
                 <div className="flex flex-col justify-center gap-5 bg-white p-8">
-                    <h1 className="text-5xl font-bold">{roaster.name}</h1>
+                    <h1 className="text-5xl font-bold">{roaster.roaster_name}</h1>
                     <p className="text-md text-[#227DA3]">{roaster.location}</p>
                     <p className="w-[38rem] text-xl mb-10">
                         {roaster.description}
