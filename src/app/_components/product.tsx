@@ -16,9 +16,9 @@ interface ProductProps {
 
 export default function Product({item}: ProductProps) {
     return (
-        <div id="roaster" className="bg-white rounded-xl shadow-lg mb-20">
-            <Link href={item.web_url} target="_blank" className="">
-                <img className="mb-5 w-96 h-96 rounded-t-xl" src="/images/pexels-dorukhan-pekcan-102942430-13741285.jpg" alt="{item.img.toString()}" />
+        <div id="roaster" className="bg-white rounded-xl shadow-lg mb-4 md:mb-20">
+            <Link href={item.web_url} target="_blank" className="block">
+                <img className="mb-5 w-60 md:w-96 h-48 md:h-96 rounded-t-xl object-cover" src="/images/pexels-dorukhan-pekcan-102942430-13741285.jpg" alt="{item.img.toString()}" />
                 <div className="p-4">
                     <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                     <p className="">
