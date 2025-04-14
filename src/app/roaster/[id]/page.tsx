@@ -106,24 +106,24 @@ export default function Page() {
 
     return (
         <div className="flex flex-col justify-center items-center gap-2">
-            <div id="topbar" className="p-4 px-96 flex justify-between items-center w-full">
-                <a href="someting" className="p-12 bg-gray-300 rounded-full"/>
-                <Link href="/dashboard" className="text-[#D97430] font-semibold text-xl">Back</Link> 
+            <div id="topbar" className="p-4 md:px-96 flex justify-between items-center w-full">
+                <a href="someting" className="p-8 md:p-12 bg-gray-300 rounded-full"/>
+                <Link href="/dashboard" className="text-[#D97430] font-semibold text-lg md:text-xl">Back</Link> 
             </div>
             {/*Roaster Profile*/}
-            <div id="roaster" className=" flex justify-center gap-5 mb-33">
-                <img src="/images/pexels-dorukhan-pekcan-102942430-14050911.jpg" className=" w-[35rem] h-[45rem] object-cover" alt="{roaster.img.toString()}"/>
-                <div className="flex flex-col justify-center gap-5 bg-white p-8">
-                    <h1 className="text-5xl font-bold">{roaster.roaster_name}</h1>
-                    <p className="text-md text-[#227DA3]">{roaster.location}</p>
-                    <p className="w-[38rem] text-xl mb-10">
+            <div id="roaster" className=" flex flex-rows md:flex-cols justify-center gap-4 md:gap-5 mb-8 md:mb-32">
+                <img src="/images/pexels-dorukhan-pekcan-102942430-14050911.jpg" className="hidden md:block md:w-[35rem] h-24 md:h-[45rem] object-cover" alt="{roaster.img.toString()}"/>
+                <div className="flex flex-col justify-center gap-4 bg-white p-4 md:p-8">
+                    <h1 className="text-3xl md:text-5xl font-bold">{roaster.roaster_name}</h1>
+                    <p className="text-md md:text-lg text-[#227DA3]">{roaster.location}</p>
+                    <p className="md:w-[38rem] text-lg md:text-xl mb-10">
                         {roaster.description}
                     </p>
-                    <a className="text-[#F5F2EE] bg-[#D97430] rounded-lg py-4 w-[25rem] ml-22 text-2xl mb-10 text-center" href="https://google.com/" target="_blank">Discover {roaster.name}</a>
+                    <a className="text-[#F5F2EE] bg-[#D97430] rounded-lg py-2 md:py-4 md:w-[25rem] md:ml-22 mb:text-2xl mb-10 text-center" href="https://google.com/" target="_blank">Discover {roaster.roaster_name}</a>
                 </div>
             </div>
             {/*Products*/}
-            <div className="grid grid-cols-3 justify-center items-center gap-44">
+            <div className="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center mt-20 md:mt-0 md:gap-44">
                 {products.map((item, index) => (
                     <Product key={item.id?.toString() || `product-${index}`} item={item}/>
                 ))}
