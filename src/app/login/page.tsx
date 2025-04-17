@@ -37,7 +37,7 @@ export default function LogIn() {
         try {
             const requestBody = JSON.stringify({email, password} as LoginRequest);
 
-            const response = await fetch("http://localhost:8080/api/login", {
+            const response = await fetch("http://api.roastnomads.com/api/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
