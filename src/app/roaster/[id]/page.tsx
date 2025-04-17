@@ -47,8 +47,8 @@ export default function Page() {
             setError(null);
 
             try {
-                console.log("Rquest URL:", `http://api.roastnomads.com/api/roasters/id?id=${id}`)
-                const roasterRes = await fetch(`http://api.roastnomads.com/api/roasters/id?id=${id}`, {
+                console.log("Rquest URL:", `https://api.roastnomads.com/api/roasters/id?id=${id}`)
+                const roasterRes = await fetch(`https://api.roastnomads.com/api/roasters/id?id=${id}`, {
                     cache: 'no-store',
                     credentials: 'include',
                 });
@@ -87,7 +87,7 @@ export default function Page() {
                 console.log(roasterData.name)
                 setRoaster(roasterData);
 
-                const productRes = await fetch(`http://api.roastnomads.com/api/products?roasters_id=${id}`, { cache: "no-store", credentials: "include"});
+                const productRes = await fetch(`https://api.roastnomads.com/api/products?roasters_id=${id}`, { cache: "no-store", credentials: "include"});
                 if (!productRes.ok) throw new Error("Failed to fetch products");
                 const productsData = await productRes.json();
                 setProducts(productsData);

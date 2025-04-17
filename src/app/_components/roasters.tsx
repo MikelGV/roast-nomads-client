@@ -26,8 +26,8 @@ export function Roasters({cat}: RoastersProps) {
         const getRoasters = async () => {
             try {
                 const res = await fetch(cat ? 
-                `http://api.roastnomads.com/api/roasters/roaster_id/product?filters=${cat}` : 
-                    "http://api.roastnomads.com/api/roasters", {cache: "no-store"})
+                `https://api.roastnomads.com/api/roasters/roaster_id/product?filters=${cat}` : 
+                    "https://api.roastnomads.com/api/roasters", {cache: "no-store"})
                 if (!res.ok) throw new Error("failed to fetch roasters")
                 const data = await res.json()
                 setRoasters(data)
