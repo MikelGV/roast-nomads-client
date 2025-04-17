@@ -1,13 +1,11 @@
 import Link from "next/link";
 
-import {  HydrateClient } from "~/trpc/server";
 import { TopBar } from "./_components/topBar";
 
 export default async function Home() {
 
 
   return (
-    <HydrateClient>
       <main className="flex min-h-screen flex-col items-center justify-center ">
         <div id="topbar" className=" px-4 py-4 md:px-8 lg:px-96 flex justify-between items-center w-full">
             <a href="someting" className="p-4 md:p-6 lg:p-12 bg-gray-300 rounded-full"/>
@@ -100,6 +98,5 @@ export default async function Home() {
             </div>
         </div>
       </main>
-    </HydrateClient>
   );
 }

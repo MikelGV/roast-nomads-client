@@ -3,7 +3,6 @@ import "~/styles/globals.css";
 import { type Metadata } from "next";
 import { Montserrat } from "next/font/google";
 
-import { TRPCReactProvider } from "~/trpc/react";
 
 export const metadata: Metadata = {
   title: "Roast Nomads",
@@ -22,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable}`}>
       <body className="bg-[#F5F2EE]">
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        {children}
       </body>
     </html>
   );
