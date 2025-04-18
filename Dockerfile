@@ -74,4 +74,4 @@ ENV NEXT_PUBLIC_ENV_VARIABLE=${NEXT_PUBLIC_ENV_VARIABLE}
 EXPOSE 3000
 # Note: Don't expose ports here, Compose will handle that for us
 
-CMD ["node", "server.js", "-p", "$PORT]
+CMD ["node", "server.js", "-p", "$PORT"]
